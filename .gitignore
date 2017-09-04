@@ -1,2 +1,6 @@
 # compiled class file
 *.class
+
+# gradle
+.gradle
+/build

@@ -5,10 +5,8 @@ dependencies {
 }
 
 jar {
+	from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) })
 	manifest {
 		attributes ('Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain')
 	}
-	into('lib') {
-        from 'libs'
-    }
 }

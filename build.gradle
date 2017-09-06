@@ -6,12 +6,6 @@ dependencies {
 	compile files('lib/resources.jar')
 }
 
-sourceSets {
-	compileJava {
-		java.srcDirs 'src/main/java/edu/gatech/oad/antlab/person'
-	}
-}
-
 jar {
 	from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) })
 	manifest {
